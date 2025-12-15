@@ -1,7 +1,7 @@
 import numpy as np
  # =========================================================
  
- def power_method(A, x0, maxit, tol):
+def power_method(A, x0, maxit, tol):
      """Approximate the dominant eigenvalue and eigenvector of a real symmetric matrix A.
  
      Parameters
@@ -24,9 +24,7 @@ import numpy as np
      iters : int
          Number of iterations performed.
      """
--    # TODO: implement the power method
--    raise NotImplementedError("power_method not implemented")
-+    A = np.asarray(A, dtype=float)
+  A = np.asarray(A, dtype=float)
 +    if A.ndim != 2 or A.shape[0] != A.shape[1]:
 +        raise ValueError("A must be a square matrix")
 +
